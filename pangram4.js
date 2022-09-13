@@ -1,0 +1,19 @@
+// SOLUTION 4
+// isPangram("") -> false
+// isPangram("abcdefghijklmnopqrstuvwxyz") -> true
+// isPangram("the quick brown fox jumps over the lazy dog") -> true
+// isPangram("the_quick_brown_fox_jumps_over_the_lazy_dog") -> true
+// isPangram("the 1 quick brown fox jumps over the 2 lazy dogs") -> true
+// isPangram("five boxing wizards jump quickly at it") -> false
+
+const LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
+export const isPangram = (str) => {
+  const parseStr = str.toLowerCase();
+
+  for (let letter of LETTERS) {
+    if (parseStr.indexOf(letter) === -1) return false;
+  }
+
+  return true;
+};
